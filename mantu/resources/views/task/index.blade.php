@@ -22,7 +22,7 @@
                         <p class="card-text">{{ Str::limit($task['description'], 40, '...')}}</p>
                         
                         <div class="mt-2">
-                            <a href={{route('task.detail')}} class="btn btn-warning">Detail</a>
+                            <a href="{{ url('detail/'.$task['id'])}}" class="btn btn-warning">Detail</a>
                         </div>
                     </div>
                 </div>

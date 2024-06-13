@@ -43,6 +43,13 @@ class Task extends Model
         return self::$tasks;
     }
 
-
+    public static function cariId($id) {
+        foreach (self::$tasks as $task) {
+            if ($task['id'] == $id) {
+                return $task;
+            }
+        }
+        return null;
+    }
 
 }

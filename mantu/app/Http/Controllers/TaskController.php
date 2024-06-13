@@ -15,11 +15,14 @@ class TaskController extends Controller
          // mengirimkan data tugas ke view
          return view('task.index', [
             'tasks' => $tasks
+            // dd($tasks)
          ]);
     }
 
-    public function detail(){
-        return view('task.detail');
+    public function detail(Request $request ,$id){
+        return view('task.detail',[
+            'tasks' => Task::cariId($id)
+        ]);
     }
 }
 

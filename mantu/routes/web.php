@@ -11,7 +11,7 @@ Route::get('/', function () {
 Route::get('/tasks', [TaskController::class, 'index']);
 
 // route untuk menampilkan detail tugas
-Route::get('/detail', [TaskController::class, 'detail'])->name('task.detail');
+Route::get('/detail/{id}', [TaskController::class, 'detail'])->name('task.detail.{id}');
 
 
 
